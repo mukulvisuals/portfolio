@@ -3711,6 +3711,7 @@ textarea:-ms-autofill {
 
 
 
+
 <section class="videos-section" id="videos">
 
 
@@ -3722,23 +3723,23 @@ textarea:-ms-autofill {
             <div class="video-row">
                 <!-- Original videos -->
                 <div class="video-item">
-                    <iframe src="https://youtu.be/DGJ1AxGKl_A?si=P10c416LTbmtX3ia" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
+                    <iframe src="https://www.youtube.com/embed/E4RzvivAAG8" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://youtu.be/zyrR4Z6YQMI?si=myQ98ePLN6hsV-Uo" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/o_izsSNkgW0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://youtu.be/QhheIMEEEgc?si=jEi4-titDWNUC8Xb" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Piw7rmUeI1I" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <!-- Duplicated videos for seamless loop -->
                 <div class="video-item">
-                    <iframe src="https://youtu.be/QBq0TRZkFVY?si=OXBRqxPQBu1gVhH_" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/E4RzvivAAG8" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://youtu.be/LCyqYV1pTFA?si=wWWxExtaimVnYnOH" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/o_izsSNkgW0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://youtu.be/TWBToOzNoAI?si=4IPeQChe_c3HCVZk" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Piw7rmUeI1I" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -3778,6 +3779,7 @@ textarea:-ms-autofill {
         </div>
     </div>
 </section>
+
 
 
 
@@ -4265,8 +4267,8 @@ function checkViewport() {
     const button = document.querySelector('.cta-button span'); 
 
     if (window.innerWidth < 1024) {
-        if (button.textContent !== 'Videos') {
-            button.textContent = 'Videos I've Edited';
+        if (button.textContent !== 'Contact') {
+            button.textContent = 'Contact Me';
         }
     } else {
         if (button.textContent !== "Videos I've Edited") {
@@ -4888,7 +4890,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function smoothScroll(event) {
         event.preventDefault();
-        const targetId = this.getAttribute("href") ? this.getAttribute("href").substring(1) : "videos";
+        const targetId = this.getAttribute("href") ? this.getAttribute("href").substring(1) : "contact";
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
@@ -4922,11 +4924,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ensure "Videos I've Edited" button scrolls to the Contact section
     document.getElementById("VideosI'veEdited").addEventListener("click", function () {
-        const videosSection = document.getElementById("videos");
-        if (videosSection) {
-            const sectionPosition = videosSection.getBoundingClientRect().top + window.scrollY;
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            const sectionPosition = contactSection.getBoundingClientRect().top + window.scrollY;
             const windowHeight = window.innerHeight;
-            const sectionHeight = videosSection.offsetHeight;
+            const sectionHeight = contactSection.offsetHeight;
             const offset = -20; // Adjust if needed
             const scrollToPosition = sectionPosition - (windowHeight / 2) + (sectionHeight / 2) + offset;
 
