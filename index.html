@@ -3388,9 +3388,10 @@ textarea:-ms-autofill {
             <span class="clients-text">80+ Happy Clients</span>
         </div>
 
-<a href="#videos" id="workTogetherBtn" class="cta-button">
-    <span>Let's Work Together</span>
+<a href="#videos" id="VideosI'veEdited" class="cta-button">
+    <span>Videos I've Edited</span>
 </a>
+
 
 
     </main>
@@ -4268,8 +4269,8 @@ function checkViewport() {
             button.textContent = 'Contact Me';
         }
     } else {
-        if (button.textContent !== "Let's Work Together") {
-            button.textContent = "Let's Work Together";
+        if (button.textContent !== "Videos I've Edited") {
+            button.textContent = "Videos I've Edited";
         }
     }
 }
@@ -4883,11 +4884,11 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const allNavLinks = document.querySelectorAll(".nav-links a, .footer-nav-link, #workTogetherBtn");
+    const allNavLinks = document.querySelectorAll(".nav-links a, .footer-nav-link, #VideosI'veEdited");
 
     function smoothScroll(event) {
         event.preventDefault();
-        const targetId = this.getAttribute("href") ? this.getAttribute("href").substring(1) : "contact";
+        const targetId = this.getAttribute("href") ? this.getAttribute("href").substring(1) : "videos";
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
@@ -4919,13 +4920,13 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", smoothScroll);
     });
 
-    // Ensure "Let's Work Together" button scrolls to the Contact section
-    document.getElementById("workTogetherBtn").addEventListener("click", function () {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            const sectionPosition = contactSection.getBoundingClientRect().top + window.scrollY;
+    // Ensure "Videos I've Edited" button scrolls to the Contact section
+    document.getElementById("VideosI'veEdited").addEventListener("click", function () {
+        const videosSection = document.getElementById("videos");
+        if (videosSection) {
+            const sectionPosition = videosSection.getBoundingClientRect().top + window.scrollY;
             const windowHeight = window.innerHeight;
-            const sectionHeight = contactSection.offsetHeight;
+            const sectionHeight = videosSection.offsetHeight;
             const offset = -20; // Adjust if needed
             const scrollToPosition = sectionPosition - (windowHeight / 2) + (sectionHeight / 2) + offset;
 
